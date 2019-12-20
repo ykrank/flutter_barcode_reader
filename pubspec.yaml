@@ -10,15 +10,20 @@ dependencies:
 
 environment:
   sdk: ">=2.0.0-dev.58.0 <3.0.0"
-
+  flutter: ">=1.10.0 <2.0.0"
+  
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
 
 # The following section is specific to Flutter.
 flutter:
   plugin:
-    androidPackage: com.apptreesoftware.barcodescan
-    pluginClass: BarcodeScanPlugin
+    platforms:
+      android:
+        package: com.apptreesoftware.barcodescan
+        pluginClass: BarcodeScanPlugin
+      ios:
+        pluginClass: BarcodeScanPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
