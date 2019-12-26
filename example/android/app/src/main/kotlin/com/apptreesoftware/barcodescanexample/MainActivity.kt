@@ -1,13 +1,12 @@
 package com.apptreesoftware.barcodescanexample
 
-import android.os.Bundle
+import com.apptreesoftware.barcodescan.BarcodeScanPlugin
+import io.flutter.embedding.android.FlutterActivity
+import io.flutter.embedding.engine.FlutterEngine
 
-import io.flutter.app.FlutterActivity
-import io.flutter.plugins.GeneratedPluginRegistrant
 
-class MainActivity(): FlutterActivity() {
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    GeneratedPluginRegistrant.registerWith(this)
+class MainActivity: FlutterActivity() {
+  override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
+    flutterEngine.plugins.add(BarcodeScanPlugin())
   }
 }
